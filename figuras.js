@@ -51,3 +51,54 @@ function areaCirculo(radio){
 }
 
 console.groupEnd();
+
+// function calcularPerimetroCuadrado(){
+//     const input = document.getElementById("InputCuadrado");
+//     const value = input.value;
+
+//     const perimetro = perimetroCuadrado(value);
+//     alert(perimetro);
+// }
+
+// function calcularAreaCuadrado(){
+//     const input = document.getElementById("InputCuadrado");
+//     const value = input.value;
+
+//     const area = areaCuadrado(value);
+//     alert(area);
+// }
+
+// function calcularAlturaTriangulo(lado1, lado2, base){
+//     const lado1 = document.getElementById("lado1");
+//     const lado2 = document.getElementById("lado2");
+//     const base = document.getElementById("lado3");
+
+//     if (lado1 === lado2 && lado1 != base){
+//         alert("Si es un triangulo iscoseles")
+//         const altura = Math.sqrt(lado1**2 - base**2/ 4)
+    
+
+//     console.log(altura)}
+//         else{
+//             alert("No lo se");
+//         }
+
+// }
+// calcularAlturaTriangulo(6,6,4)
+
+function alturaTrianguloIsosceles(trianguloGrandeLadoA, trianguloGrandeLadoB, trianguloGrandeLadoBase) {
+    if (trianguloGrandeLadoA != trianguloGrandeLadoB) {
+        console.error("Los lados a y b no son iguales");
+    } else {
+        const trianguloPequenoLadoB = trianguloGrandeLadoBase / 2;
+        const trianguloPequenoLadoBase = trianguloGrandeLadoA;
+
+        const trianguloPequenoLadoBCuadrado = trianguloPequenoLadoB * trianguloPequenoLadoB;
+        const trianguloPequenoLadoBaseCuadrado = trianguloPequenoLadoBase * trianguloPequenoLadoBase;
+
+        const trianguloPequenoLadoA = Math.sqrt(trianguloPequenoLadoBaseCuadrado - trianguloPequenoLadoBCuadrado);
+
+        const trianguloGrandeAltura = trianguloPequenoLadoA;
+        return trianguloGrandeAltura;
+    }
+}
